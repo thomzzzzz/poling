@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Thomz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div id="welcomePopup" class="welcome-popup">
+        <div class="popup-content">
+            <img src="https://telegra.ph/file/5418e8dfe89ded1d7953d.jpg" alt="Logo InfernoShop" class="popup-logo">
+            <h2>Selamat Datang di Store Thomz!</h2>
+            <p>Silahkan kalian pilih barang-barang yang ingin kalian beli ya guys untuk ketersediaan stok sudah pasti tersedia semuanya okeh bisa langsung kalian checkout silahkan memulai belanja.</p>
+            <button id="closeWelcomePopup" class="popup-button">Mulai  Belanja</button>
+        </div>
+    </div>
+        <div class="logo">Store Thomz</div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Cari produk...">
+            <button onclick="cariProduk()">Cari</button>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="store/keranjang.html">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Keranjang</span>
+                        <span id="cart-count" class="cart-notification">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="category-bar">
+    <a href="#" class="active" data-category="semua">Semua Barang</a>
+     <a href="#" data-category="Vps">Vps</a>
+    <a href="#" data-category="Panel">Panel</a>
+    <a href="#" data-category="Bot">Bot</a>
+    <a href="#" data-category="Digital ocean">Digital Ocean</a>
+    <a href="#" data-category="Kebhost">Kebhost</a>
+    <a href="#" data-category="Domain">Domain</a>
+    <a href="#" data-category="Jasa">Jasa</a>
+    <a href="#" data-filter="promo">Promo</a>
+    <a href="#" data-filter="best-seller">Best Seller</a>
+</div>
+
+    <div class="promo-carousel-container">
+        <div class="promo-carousel">
+            <img src="image/banner1.png" alt="Promo Banner 1">
+            <img src="image/banner2.jpg" alt="Promo Banner 2">
+            <img src="image/banner3.jpg" alt="Promo Banner 3">  
+    </div><div class="product-list">
+        <div class="product-card" data-id="1" data-name="Vps 8 Gb 4 Core" data-price="50000" data-image="image/Vps.png" data-description="Vps Dari digital ocean kegunaan bisa untuk panel pterodactyl bisa untuk cpanel dan kebutuhan hosting lainnya.
+
+        Keuntungan :
+        
+        - Free instal panel wings dan sudah siap pakai
+        - script cpanel
+        - script push
+        - High quality
+        - Garansi 20 Day 1x Replace" data-best-seller="true" data-promo="true" data-discount="16%" data-original-price="60000">
+            <img src="image/Vps.png" alt="Vps 8 Gb 4 Core">
+            <h3 class="product-title">Vps 8 Gb 4 Core</h3>
+            <p class="product-price"><span style="text-decoration: line-through; color: #aaa; font-size: 0.9em;">Rp 60.000</span> Rp 50.000</p>
+            <button class="add-to-cart-btn" data-id="1" data-name="Vps 8 Gb 4 Core" data-price="50000" data-image="image/Vps.png">Tambahkan</button>
+        </div>
+        <div class="product-card" data-id="2" data-name="Vps 16 Gb 4 Core" data-price="70000" data-image="image/Vps.png" data-description="Vps Dari digital ocean kegunaan bisa untuk panel pterodactyl bisa untuk cpanel dan kebutuhan hosting lainnya.
+
+        Keuntungan :
+        
+        - Free instal panel wings dan sudah siap pakai
+        - script cpanel
+        - script push
+        - High quality
+        - Garansi 20 Day 1x Replace" data-best-seller="true" data-promo="true" data-discount="18%" data-original-price="85000">
+            <img src="image/Vps.png" alt="Vps 16 Gb 4 Core">
+            <h3 class="product-title">Vps 16 Gb 4 Core</h3>
+            <p class="product-price"><span style="text-decoration: line-through; color: #aaa; font-size: 0.9em;">Rp 85.000</span> Rp 70.000</p>
+            <button class="add-to-cart-btn" data-id="2" data-name="Vps 16 Gb 4 Core" data-price="70000" data-image="image/Vps.png">Tambahkan</button>
+        </div>
+        <div class="product-card" data-id="3" data-name="Vps 4 Gb 2 Core" data-price="40000" data-image="image/Vps.png" data-description="Vps Dari digital ocean kegunaan bisa untuk panel pterodactyl bisa untuk cpanel dan kebutuhan hosting lainnya.
+
+        Keuntungan :
+        
+        - Free instal panel wings dan sudah siap pakai
+        - script cpanel
+        - script push
+        - High quality
+        - Garansi 20 Day 1x Replace">
+            <img src="image/Vps.png" alt="Vps 4 Gb 2 Core">
+            <h3 class="product-title">Vps 4 Gb 2 Core</h3>
+            <p class="product-price">Rp 40.000</p>
+            <button class="add-to-cart-btn" data-id="3" data-name="Vps 4 Gb 2 Core" data-price="40000" data-image="image/Vps.png">Tambahkan</button>
+        </div>
+        <div class="product-card" data-id="4" data-name="Vps 2 Gb 2 Core" data-price="30000" data-image="image/Vps.png" data-description="Vps Dari digital ocean kegunaan bisa untuk panel pterodactyl bisa untuk cpanel dan kebutuhan hosting lainnya.
+
+        Keuntungan :
+        
+        - Free instal panel wings dan sudah siap pakai
+        - script cpanel
+        - script push
+        - High quality
+        - Garansi 20 Day 1x Replace">
+            <img src="image/Vps.png" alt="Vps 2 Gb 2 Core">
+            <h3 class="product-title">Vps 2 Gb 2 Core</h3>
+            <p class="product-price">Rp 30.000</p>
+            <button class="add-to-cart-btn" data-id="4" data-name="Vps 2 Gb 2 Core" data-price="30000" data-image="image/Vps.png">Tambahkan</button>
+        </div>
+        <div class="product-card" data-id="5" data-name="Vps 2 Gb 1 Core" data-price="25000" data-image="image/Vps.png" data-description="Vps Dari digital ocean kegunaan bisa untuk panel pterodactyl bisa untuk cpanel dan kebutuhan hosting lainnya.
+
+        Keuntungan :
+        
+        - Free instal panel wings dan sudah siap pakai
+        - script cpanel
+        - script push
+        - High quality
+        - Garansi 20 Day 1x Replace" data-best-seller="false">
+                    <img src="image/Vps.png" alt="Vps 2 Gb 1 Core">
+                    <h3 class="product-title">Vps 2 Gb 1 Core</h3>
+                    <p class="product-price">Rp 25.000</p>
+                    <button class="add-to-cart-btn" data-id="5" data-name="25.000" data-price="25000" data-image="image/Vps.png">Tambahkan</button>
+                </div>
+        <div class="product-card" data-id="6" data-name="Bot Pushkontak Versi Biasa" data-price="10000" data-image="image/bot.png" data-description="Bot Puhskontak untuk menambahkan kontak atau promosi agar bisa chat ke seluruh member grup
+        
+        Keuntungan :
+        
+        - Garansi selama 1 bulan full
+        - Pengajaran sampe bisa
+        - Di pastikan deres kontak
+        - Menggunakan script vip v5
+        
+        Note : Pushkontak tidak selalu aman bisa jadi terkena kenon bot kami hanya meminimalisir kenon dengan menggunakan jeda">
+            <img src="image/bot.png" alt="Bot Pushkontak Versi Biasa">
+            <h3 class="product-title">Bot Pushkontak Versi Biasa</h3>
+            <p class="product-price">Rp 10.000</p>
+            <button class="add-to-cart-btn" data-id="6" data-name="Bot Pushkontak Versi Biasa" data-price= "10000" data-image="image/bot.png">Tambahkan</button>
+        </div>
+        <div class="product-card" data-id="7" data-name="Bot Pushkontak Versi Bagus" data-price="15000" data-image="image/bot.png" data-description="Pedang legendaris yang ditempa dalam kegelapan abadi.Bot Puhskontak untuk menambahkan kontak atau promosi agar bisa chat ke seluruh member grup
+        
+        Keuntungan :
+        
+        - Garansi selama 1 bulan full
+        - Pengajaran sampe bisa
+        - Di pastikan deres kontak
+        - Bisa atur jeda Pushkontak
+        - cekidgc no overlimit
+        - Bot Fast respon 
+        - Menggunakan script Terbaru
+        
+        Note : Pushkontak tidak selalu aman bisa jadi terkena kenon bot kami hanya meminimalisir kenon dengan menggunakan jeda" data-best-seller="true">
+            <img src="image/bot.png" alt="Bot Pushkontak Versi Bagus">
+            <h3 class="product-title">Bot Pushkontak Versi Bagus</h3>
+            <p class="product-price">Rp 15.000</p>
+            <button class="add-to-cart-btn" data-id="7" data-name="Bot Pushkontak Versi Bagus" data-price="15000" data-image="image/bot.png">Tambahkan</button>
+        </div>
+        <div class="product-card" data-id="8" data-name="Admin pannel Kebhost 1 Bulan" data-price="20000" data-image="image/kebhost.png" data-description="Admin panel itu kalian bisa dapat berjualan panel dan ini keuntungannya
+        
+        - Bisa jualan panel
+        - Bisa jualan bot
+        - Bisa open reseller panel
+        - Mendapatkan sc cpanel
+        - mendapatkan sc push">
+            <img src="image/kebhost.png" alt="Admin pannel Kebhost 1 Bulan ">
+            <h3 class="product-title">Admin pannel Kebhost 1 Bulan</h3>
+            <p class="product-price">Rp 20.000</p>
+            <button class="add-to-cart-btn" data-id="8" data-name="Admin pannel Kebhost 1 Bulan" data-price="20000" data-image="image/kebhost.png">Tambahkan</button>
+        </div>
+        <div class="product-card" data-id="9" data-name="Admin pannel kebhost permanen" data-price="30000" data-image="image/kebhost.png" data-description="Admin panel itu kalian bisa dapat berjualan panel dan ini keuntungannya
+        
+        - Bisa jualan panel
+        - Bisa jualan bot
+        - Bisa open reseller panel
+        - Mendapatkan sc cpanel
+        - mendapatkan sc push"data-best-seller="true">
+            <img src="image/kebhost.png" alt="Admin pannel kebhost permanen">
+            <h3 class="product-title">Admin pannel kebhost permanen</h3>
+            <p class="product-price">Rp 30.000</p>
+            <button class="add-to-cart-btn" data-id="9" data-name="Admin pannel kebhost permanen" data-price="30000" data-image="image/kebhost.png">Tambahkan</button>
+        </div>
+        <div class="product-card" data-id="10" data-name="Pt Pannel kebhost 1 bulan" data-price="30000" data-image="image/kebhost.png" data-description="Pt panel itu kalian bisa dapat berjualan panel dan ini keuntungannya
+        
+        - Bisa jualan panel
+        - Bisa jualan bot
+        - Bisa open admin panel
+        - Bisa open reseller panel
+        - Mendapatkan sc cpanel
+        - mendapatkan sc push
+        - dan tutor cara open adp">
+            <img src="image/kebhost.png" alt="Pt Pannel kebhost 1 bulan">
+            <h3 class="product-title">Pt Pannel kebhost 1 bulan</h3>
+            <p class="product-price">Rp 30.000</p>
+            <button class="add-to-cart-btn" data-id="10" data-name="Pt Pannel kebhost 1 bulan" data-price="30000" data-image="image/kebhost.png">Tambahkan</button>
+        </div>
+        <div class="product-card" data-id="11" data-name="Pt Pannel kebhost permanen" data-price="45000" data-image="image/kebhost.png" data-description="Pt panel itu kalian bisa dapat berjualan panel dan ini keuntungannya
+        
+        - Bisa jualan panel
+        - Bisa jualan bot
+        - Bisa open admin panel
+        - Bisa open reseller panel
+        - Mendapatkan sc cpanel
+        - mendapatkan sc push
+        - dan tutor cara open adp" data-best-seller="true" data-promo="true" data-discount="10%" data-original-price="50000">
+            <img src="image/kebhost.png" alt="Pt Pannel kebhost permanen">
+            <h3 class="product-title">Pt Pannel kebhost permanen</h3>
+            <p class="product-price"><span style="text-decoration: line-through; color: #aaa; font-size: 0.9em;">Rp 50.000</span> Rp 45.000</p>
+            <button class="add-to-cart-btn" data-id="11" data-name="Pt Pannel kebhost permanen" data-price="45000" data-image="image/kebhost.png">Tambahkan</button>
+        </div>
+        <div class="product-card" data-id="12" data-name="Reseller pannel 1 bulan" data-price="10000" data-image="image/kebhost.png" data-description="Reseller panel itu kalian bisa dapat berjualan panel dan ini keuntungannya
+        
+        - Bisa jualan panel
+        - Bisa jualan bot
+        - Buat panel lewat bot">
+            <img src="image/kebhost.png" alt="Reseller pannel 1 bulan">
+            <h3 class="product-title">Reseller pannel 1 bulan</h3>
+            <p class="product-price">Rp 10.000</p>
+            <button class="add-to-cart-btn" data-id="12" data-name="Reseller pannel 1 bulan" data-price="10000" data-image="image/kebhost.png">Tambahkan</button>
+        </div>
+        <div class="product-card" data-id="13" data-name="Reseller pannel permanen" data-price="20000" data-image="image/kebhost.png" data-description="Reseller panel itu kalian bisa dapat berjualan panel dan ini keuntungannya
+        
+        - Bisa jualan panel
+        - Bisa jualan bot
+        - Buat panel lewat bot" data-best-seller="true">
+            <img src="image/kebhost.png" alt="Reseller pannel permanen">
+            <h3 class="product-title">Reseller panel permanen</h3>
+            <p class="product-price">Rp 20.000</p>
+            <button class="add-to-cart-btn" data-id="13" data-name="Reseller pannel permanen" data-price="20000" data-image="image/kebhost.png">Tambahkan</button>
+        </div>
+        <div class="product-card" data-id="14" data-name="Jasa Instal pannel / Reinstal" data-price="10000" data-image="image/vps.png" data-description="Menyediakan jasa instal panel pterodactyl dan reinstal sudah di pastikan berhasil subdo bisa dari kalian atau dari kami yang pasti vps dari kalian yah" data-best-seller="true">
+            <img src="image/vps.png" alt="Jasa Instal pannel / Reinstal">
+            <h3 class="product-title">Jasa Instal pannel / Reinstal</h3>
+            <p class="product-price">Rp 10.000</p>
+            <button class="add-to-cart-btn" data-id="14" data-name="Jasa Instal pannel / Reinstal" data-price="10000" data-image="image/vps.png">Tambahkan</button>
+        </div>
+        <div class="product-card" data-id="15" data-name="Jasa Rename Script" data-price="0" data-image="image/jasarename.png" data-description="Untuk jasa rename script opsional yah guys di harga 10-15k atau bisa lebih dan kurang bisa langsung ke wa aja pencet logo wa di kanan bawah">
+            <img src="image/jasarename.png" alt="Jasa Rename Script">
+            <h3 class="product-title">Jasa Rename Script</h3>
+            <p class="product-price">Rp 0</p>
+            <button class="add-to-cart-btn" data-id="15" data-name="Jasa Rename Script langsung wa" data-price="0" data-image="image/jasarename.png">Tambahkan</button>
+        </div>
+        <div class="product-card" data-id="16" data-name="Jasa fix script eror langsung wa" data-price="0" data-image="image/jasarename.png" data-description="Untuk jasa fix opsional guys tergantung erornya jadi bisa langsung ke wa aja.">
+            <img src="image/jasarename.png" alt="Jasa fix script eror langsung wa">
+            <h3 class="product-title">Jasa fix script eror langsung wa</h3>
+            <p class="product-price">Rp 0</p>
+            <button class="add-to-cart-btn" data-id="16" data-name="Jasa fix script eror" data-price="0" data-image="image/jasarename.png">Tambahkan</button>
+        </div>
+        <div class="product-card" data-id="17" data-name="Jasa buat web payment" data-price="30000" data-image="image/jasapay.png" data-description="Jasa Membuat web payment kalian sendiri untuk jasa ini demo paymentnya
+        payment.thomvelz.me
+        
+        jika ingin berbeda atau buat dengan kreatifitas sendiri bisa langsung wa dan berikan contoh kalo bisa
+        Note : Harga berbeda yah guys" data-best-seller="true">
+            <img src="image/jasapay.png" alt="Jasa buat web payment">
+            <h3 class="product-title">Jasa buat web payment</h3>
+            <p class="product-price"> Rp 30.000</p>
+            <button class="add-to-cart-btn" data-id="17" data-name="Jasa buat web payment" data-price="30000" data-image="image/jasapay.png">Tambahkan</button>
+        </div>
+        <div class="product-card" data-id="18" data-name="Jasa buat web Hosting (Comingsoon)" data-price="0" data-image="image/jasaweb.jpg" data-description="Comingsoon" data-best-seller="true">
+            <img src="image/jasaweb.jpg" alt="Jasa Buat Web Hosting">
+            <h3 class="product-title">Jasa Buat Web Hosting</h3>
+            <h3 class="product-title">Produk belum tersedia</h3>
+            <button class="add-to-cart-btn" data-id="17" data-name="COMINGSOON" data-price="0" data-image="image/jasaweb.jpg">Tambahkan</button>
+        </div>
+        <div class="product-card" data-id="19" data-name="Panel Private 1 Gb Cpu 30%" data-price="3000" data-image="image/panel.png" data-description="Panel pterodactyl untuk bot whatsapp/telegram/discord
+
+        Keuntungan :
+        
+        - Bisa buat runing bot
+        - Garansi 1 bulan full
+        - Server terjaga 
+        - Jual kualitas bukan asal jual 
+        - Sc udah pasti aman g bakalan ada yang nyolong">
+            <img src="image/panel.png" alt="Panel Private 1 Gb Cpu 30%">
+            <h3 class="product-title">Panel Private 1 Gb Cpu 30%</h3>
+            <p class="product-price">Rp 3.000</p>
+            <button class="add-to-cart-btn" data-id="19" data-name="Panel Private 1 Gb Cpu 30%" data-price="3000" data-image="image/panel.png">Tambahkan</button>
+        </div>
+        <div class="product-card" data-id="20" data-name="Panel Private 2 Gb Cpu 50%" data-price="5000" data-image="image/panel.png" data-description="Panel pterodactyl untuk bot whatsapp/telegram/discord
+
+        Keuntungan :
+        
+        - Bisa buat runing bot
+        - Garansi 1 bulan full
+        - Server terjaga 
+        - Jual kualitas bukan asal jual 
+        - Sc udah pasti aman g bakalan ada yang nyolong" >
+            <img src="image/panel.png" alt="Panel Private 2 Gb Cpu 50%">
+            <h3 class="product-title">Panel Private 2 Gb Cpu 50%</h3>
+            <p class="product-price">Rp 5.000</p>
+            <button class="add-to-cart-btn" data-id="20" data-name="Panel Private 2 Gb Cpu 50%" data-price="5000" data-image="image/panel.png">Tambahkan</button>
+        </div>
+        <div class="product-card" data-id="21" data-name="Panel Private 5 Gb Cpu 100%" data-price="8000" data-image="image/panel.png" data-description="Panel pterodactyl untuk bot whatsapp/telegram/discord
+
+        Keuntungan :
+        
+        - Bisa buat runing bot
+        - Garansi 1 bulan full
+        - Server terjaga 
+        - Jual kualitas bukan asal jual 
+        - Sc udah pasti aman g bakalan ada yang nyolong">
+            <img src="image/panel.png" alt="Panel Private 5 Gb Cpu 100%">
+            <h3 class="product-title">Panel Private 5 Gb Cpu 100%</h3>
+            <p class="product-price">Rp 8.000</p>
+            <button class="add-to-cart-btn" data-id="21" data-name="Panel Private 5 Gb Cpu 100%" data-price="8000" data-image="image/panel.png">Tambahkan</button>
+        </div>
+        <div class="product-card" data-id="22" data-name="Panel Private 7 Gb Cpu 150%" data-price="10000" data-image="image/panel.png" data-description="Panel pterodactyl untuk bot whatsapp/telegram/discord
+
+        Keuntungan :
+        
+        - Bisa buat runing bot
+        - Garansi 1 bulan full
+        - Server terjaga 
+        - Jual kualitas bukan asal jual 
+        - Sc udah pasti aman g bakalan ada yang nyolong">
+            <img src="image/panel.png" alt="Panel Private 7 Gb Cpu 150%">
+            <h3 class="product-title">Panel Private 7 Gb Cpu 150%</h3>
+            <p class="product-price">Rp 10.000</p>
+            <button class="add-to-cart-btn" data-id="22" data-name="Panel Private 7 Gb Cpu 150%" data-price="10000" data-image="image/panel.png">Tambahkan</button>
+        </div>
+        <div class="product-card" data-id="23" data-name="Panel Private Unli" data-price="15000" data-image="image/panel.png" data-description="Panel pterodactyl untuk bot whatsapp/telegram/discord
+
+        Keuntungan :
+        
+        - Bisa buat runing bot
+        - Garansi 1 bulan full
+        - Server terjaga 
+        - Jual kualitas bukan asal jual 
+        - Sc udah pasti aman g bakalan ada yang nyolong" data-best-seller="true">
+                    <img src="image/panel.png" alt="Panel Private Unli">
+                    <h3 class="product-title">Panel Private Unli</h3>
+                    <p class="product-price">Rp 15.000</p>
+                    <button class="add-to-cart-btn" data-id="23" data-name="Panel Private Unli" data-price="15000" data-image="image/panel.png">Tambahkan</button>
+                </div>
+        <div class="product-card" data-id="24" data-name="Digital ocean 2 bulan 10 Droplet Vcc" data-price="165000" data-image="image/do.png" data-description="Digital ocean adalah platform pembuatan vps guys 
+        
+        Keuntungan : 
+        
+        - Full akses email dan do
+        - aktif 2 bulan
+        - Garansi 3 hari
+        - 10 Droplet" data-best-seller="true">
+            <img src="image/do.png" alt="Digital ocean 2 bulan 10 Droplet">
+            <h3 class="product-title">Digital ocean 2 bulan 10 Droplet</h3>
+            <p class="product-price">Rp 165.000</p>
+            <button class="add-to-cart-btn" data-id="24" data-name="Digital ocean 2 bulan 10 Droplet" data-price= "165000" data-image="image/do.png">Tambahkan</button>
+        </div>
+        <div class="product-card" data-id="25" data-name="Digital ocean 1 tahun 10 Droplet" data-price="200000" data-image="image/do.png" data-description="Digital ocean adalah platform pembuatan vps guys 
+        
+        Keuntungan : 
+        
+        - Full akses email dan do
+        - aktif 2 bulan
+        - Garansi 3 hari
+        - 10 Droplet" data-best-seller="true">
+            <img src="image/do.png" alt="Digital ocean 1 tahun 10 Droplet">
+            <h3 class="product-title">Digital ocean 1 tahun 10 Droplet</h3>
+            <p class="product-price">Rp 200.000</p>
+            <button class="add-to-cart-btn" data-id="25" data-name="Digital ocean 1 tahun 10 Droplet" data-price="200000" data-image="image/do.png">Tambahkan</button>
+        </div>
+        <div class="product-card" data-id="26" data-name="Script Pushkontak Vip v5 No enc" data-price="10000" data-image="image/bot.png" data-description="File script pushkontak guys">
+            <img src="image/bot.png" alt="Script Pushkontak Vip v5 No enc">
+            <h3 class="product-title">Script Pushkontak Vip v5 No enc</h3>
+            <p class="product-price">Rp 10.000</p>
+            <button class="add-to-cart-btn" data-id="25" data-name="Script Pushkontak Vip v5 No enc" data-price="10000" data-image="image/bot.png">Tambahkan</button>
+        </div>
+        <div class="product-card" data-id="27" data-name="Domain My.id" data-price="25000" data-image="image/domain.png" data-description="Domain itu kayak alamat rumah buat website kamu di internet. singkatnya domain itu buat website
+        
+        - Full acces cloudflare
+        - Masa aktif 1 tahun
+        - Garansi 3 Bulan" data-best-seller="true">
+            <img src="image/domain.png" alt="Domain My.id">
+            <h3 class="product-title">Domain My.id</h3>
+            <p class="product-price">Rp 25.000</p>
+            <button class="add-to-cart-btn" data-id="27" data-name="Domain My.id" data-price="25000" data-image="image/domain.png">Tambahkan</button>
+        </div>
+        <div class="product-card" data-id="28" data-name="Domain Biz.id" data-price="25000" data-image="image/domain.png" data-description="Domain itu kayak alamat rumah buat website kamu di internet. singkatnya domain itu buat website
+        
+        - Full acces cloudflare
+        - Masa aktif 1 tahun
+        - Garansi 3 Bulan">
+            <img src="image/domain.png" alt="Domain Biz.id">
+            <h3 class="product-title">Domain Biz.id</h3>
+            <p class="product-price">Rp 25.000</p>
+            <button class="add-to-cart-btn" data-id="28" data-name="Domain Biz.id" data-price="25000" data-image="image/domain.png">Tambahkan</button>
+        </div>
+        <div class="product-card" data-id="29" data-name="Domain Web.id" data-price="30000" data-image="image/domain.png" data-description="Domain itu kayak alamat rumah buat website kamu di internet. singkatnya domain itu buat website
+        
+        - Full acces cloudflare
+        - Masa aktif 1 tahun
+        - Garansi 3 Bulan" data-best-seller="true">
+            <img src="image/domain.png" alt="Domain Web.id">
+            <h3 class="product-title">Domain Web.id</h3>
+            <p class="product-price">Rp 30.000</p>
+            <button class="add-to-cart-btn" data-id="29" data-name="Domain Web.id" data-price="30000" data-image="image/domain.png">Tambahkan</button>
+        </div>
+        <div class="product-card" data-id="30" data-name="Domain .Store" data-price="30000" data-image="image/domain.png" data-description="Domain itu kayak alamat rumah buat website kamu di internet. singkatnya domain itu buat website
+        
+        - Full acces cloudflare
+        - Masa aktif 1 tahun
+        - Garansi 3 Bulan">
+            <img src="image/domain.png" alt="Domain .Store">
+            <h3 class="product-title">Domain .Store</h3>
+            <p class="product-price">Rp 30.000</p>
+            <button class="add-to-cart-btn" data-id="30" data-name="Domain .Store" data-price="30000" data-image="image/domain.png">Tambahkan</button>
+        </div>
+        <div class="product-card" data-id="31" data-name="Domain .Site" data-price="30000" data-image="image/domain.png" data-description="Domain itu kayak alamat rumah buat website kamu di internet. singkatnya domain itu buat website
+        
+        - Full acces cloudflare
+        - Masa aktif 1 tahun
+        - Garansi 3 Bulan" data-best-seller="true">
+            <img src="image/domain.png" alt="Domain .Site">
+            <h3 class="product-title">Domain .Site</h3>
+            <p class="product-price">Rp 30.000</p>
+            <button class="add-to-cart-btn" data-id="31" data-name="Domain .Site" data-price="30000" data-image="image/domain.png">Tambahkan</button>
+        </div>
+        <div class="product-card" data-id="32" data-name="Domain .Xyz" data-price="35000" data-image="image/domain.png" data-description="Domain itu kayak alamat rumah buat website kamu di internet. singkatnya domain itu buat website
+        
+        - Full acces cloudflare
+        - Masa aktif 1 tahun
+        - Garansi 3 Bulan">
+            <img src="image/domain.png" alt="Domain .Xyz">
+            <h3 class="product-title">Domain .Xyz</h3>
+            <p class="product-price">Rp 35.000</p>
+            <button class="add-to-cart-btn" data-id="32" data-name="Domain .Xyz" data-price="35000" data-image="image/domain.png">Tambahkan</button>
+        </div>
+    </div>
+
+    <div id="loading-indicator" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #eee; font-size: 1.2em;">
+        <i class="fas fa-spinner fa-spin"></i> Mencari Produk...
+    </div>
+
+    <div class="product-modal" id="productModal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <img id="modal-image" src="" alt="">
+            <h2 id="modal-title"></h2>
+            <p id="modal-price" class="modal-price"></p>
+            <p id="modal-description"></p>
+            <button id="modal-add-to-cart" class="modal-add-to-cart" data-id="" data-name="" data-price="" data-image="">Tambahkan ke Keranjang</button>
+        </div>
+    </div>
+
+    <div class="bottom-navigation">
+        <a href="#">
+            <i class="fas fa-home"></i>
+            <span>Beranda</span>
+        </a>
+        <a href="#">
+            <i class="fas fa-list"></i>
+            <span>Kategori</span>
+        </a>
+        <a href="store/keranjang.html">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Keranjang</span>
+            <span id="bottom-cart-count" class="cart-notification" style="display: none;">0</span>
+        </a>
+    <a href="https://wa.me/6283834510927" target="_blank" class="whatsapp-button">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2025 Thomvelz Store Hosting</p>
+        <p>Dibuat dengan <i class="fas fa-heart" style="color: #ff4d4d;"></i> di Indonesia</p>
+        <p><a href="#">Kebijakan Privasi</a> | <a href="#">Syarat & Ketentuan</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
